@@ -1,0 +1,30 @@
+menu "Example Configuration"
+
+    config EXAMPLE_DUMP_ADV_DATA_AND_SCAN_RESP
+        bool "Dump whole adv data and scan response data in example"
+        default n
+
+config ESP_WIFI_SSID
+        string "WiFi SSID"
+        default "myssid"
+        help
+            SSID (network name) for the example to connect to.
+
+    config ESP_WIFI_PASSWORD
+        string "WiFi Password"
+        default "mypassword"
+        help
+            WiFi password (WPA or WPA2) for the example to use.
+
+
+    config ESP_IP_ADDRESS
+	string "Server IP Address"
+	default "192.168.0.180"
+
+    config ESP_MAXIMUM_RETRY
+        int "Maximum retry"
+        default 5
+        help
+            Set the Maximum retry to avoid station reconnecting to the AP unlimited when the AP is really
+
+endmenu
